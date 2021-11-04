@@ -93,7 +93,26 @@ var __rest = (this && this.__rest) || function (s, e) {
     const spiderman = new Superman('leo', 'nerd');
     spiderman.fullName = 'lorena';
     class Mutante {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
     }
+    class Xmen extends Mutante {
+        salvarMundo() {
+            return 'Mundo a salvo!';
+        }
+    }
+    class Villian extends Mutante {
+        conquistarMundo() {
+            return 'Mundo conquistado';
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan');
+    const magneto = new Villian('Magneto', 'Magnus');
+    const printName = (character) => {
+        console.log(character.realName);
+    };
 })();
 (() => {
     const name = "lorena ";
@@ -123,6 +142,82 @@ var __rest = (this && this.__rest) || function (s, e) {
     const greet = (name) => ` hola ${name}`;
     const saveTheWorld = () => ` el mundo se salvo`;
     let myFunction;
+})();
+const conducirBatimovil = (auto) => {
+    auto.encender = true;
+    auto.velocidadMaxima = 100;
+    auto.acelear();
+};
+const batiMovil = {
+    encender: false,
+    velocidadMaxima: 0,
+    acelear() {
+        console.log("...... gogogo!!!");
+    }
+};
+const guason = {
+    reir: true,
+    comer: true,
+    llorar: false
+};
+const reir = (guason) => {
+    if (guason.reir) {
+        console.log("JAJAJAJA");
+    }
+};
+const ciudadGotica = (ciudadanos) => {
+    return ciudadanos.length;
+};
+class Persona {
+    constructor(nombre, edad, sexo, estadoCivil) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.estadoCivil = estadoCivil;
+    }
+    imprimirBio() {
+        console.log(this.nombre);
+    }
+}
+(() => {
+    const client = {
+        name: 'Fernando',
+        age: 25,
+        address: {
+            id: 125,
+            zip: 'KY2 SUD',
+            city: 'Ottawa'
+        },
+        getFullAddress(id) {
+            return this.address.city;
+        }
+    };
+    const client2 = {
+        name: 'Melissa',
+        age: 30,
+        address: {
+            city: 'Toronto',
+            id: 120,
+            zip: 'K2S U2A'
+        },
+        getFullAddress(id) {
+            return this.address.city;
+        }
+    };
+    class Mutant {
+        constructor(age, name, realName) {
+            this.age = age;
+            this.name = name;
+            this.realName = realName;
+        }
+        mutantPower(id) {
+            return this.name + ' ' + this.realName;
+        }
+    }
+    let addNumbersFunction;
+    addNumbersFunction = (a, b) => {
+        return 10;
+    };
 })();
 const batimovil = {
     carroceria: "Negra",
