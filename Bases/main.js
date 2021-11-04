@@ -219,6 +219,15 @@ class Persona {
         return 10;
     };
 })();
+var Validations;
+(function (Validations) {
+    Validations.validateText = (text) => {
+        return (text.length > 3) ? true : false;
+    };
+    Validations.validateDate = (myDate) => {
+        return (isNaN(myDate.valueOf())) ? true : false;
+    };
+})(Validations || (Validations = {}));
 const batimovil = {
     carroceria: "Negra",
     modelo: "6x6",
