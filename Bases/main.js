@@ -65,6 +65,37 @@ var __rest = (this && this.__rest) || function (s, e) {
     }
 })();
 (() => {
+    class Hero {
+        constructor(name, team, purealName) {
+            this.name = name;
+            this.team = team;
+            this.purealName = purealName;
+        }
+        bio() {
+            return ` ${this.name} (${this.team})`;
+        }
+    }
+    Hero.avgAge = 35;
+    const antman = new Hero('Antman', 'Capitan');
+    console.log(antman);
+    class Superman extends Hero {
+        constructor(name, team, purealName, human) {
+            super(name, team);
+            this.human = human;
+        }
+        get fullName2() {
+            return `${this.purealName}`;
+        }
+        set fullName(name) {
+            this.purealName = name;
+        }
+    }
+    const spiderman = new Superman('leo', 'nerd');
+    spiderman.fullName = 'lorena';
+    class Mutante {
+    }
+})();
+(() => {
     const name = "lorena ";
     function returnName() {
         return name;
